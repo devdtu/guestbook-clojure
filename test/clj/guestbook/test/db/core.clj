@@ -32,6 +32,7 @@
                                                :message   "Hello, World"
                                                :timestamp timestamp}
                                               (-> (db/get-messages t-conn {})
+                                                  ;(#(println %))
                                                   (first)
                                                   ;(#(println %))
                                                   (select-keys [:name :message :timestamp])))))))
