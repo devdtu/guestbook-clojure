@@ -33,4 +33,5 @@
                                                :timestamp timestamp}
                                               (-> (db/get-messages t-conn {})
                                                   (first)
+                                                  ;(#(println %))
                                                   (select-keys [:name :message :timestamp])))))))
