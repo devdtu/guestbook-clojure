@@ -49,6 +49,7 @@
 
 (defn start-app [args]
   (doseq [component (-> args
+  (doseq [component (-> args
                         (parse-opts cli-options)
                         mount/start-with-args
                         :started)]
